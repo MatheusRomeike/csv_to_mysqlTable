@@ -1,7 +1,7 @@
 <?php
 	//criação de uma váriavel para se ligar ao banco de dados
 	$conn = new mysqli("localhost", "root", "", "csv");
-	//formatação para a escrita brasileira
+	//formatação para o padrão de escrita brasileiro.
 	mysqli_set_charset($conn,"utf8");
 	
 	//logica para checar o tipo de arquivo
