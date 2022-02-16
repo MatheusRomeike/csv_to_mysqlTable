@@ -8,4 +8,6 @@ Agora, digite em uma nova barra de pesquisa do seu navegador: "http:localhost/NO
 <br> <br>
 Ao término da execução, pode voltar para a página "http://localhost/phpmyadmin/" e dar um refresh no banco de dados, e pronto, seus dados estarão inseridos lá dentro, formatando itens que não combinem com o tipo de váriavel.
 <br> <br>
+Dentro do localhost anterior, você pode exportar seu banco de dados e abrir no MySQL.
+<br> <br>
 Video utilizado para resolver o problema: https://www.youtube.com/watch?v=PMUSvfo6S7w&t=58s.
