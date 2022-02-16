@@ -1,19 +1,23 @@
 <?php
+	//criação de uma váriavel para se ligar ao banco de dados
 	$conn = new mysqli("localhost", "root", "", "csv");
+	//formatação para a escrita brasileira
 	mysqli_set_charset($conn,"utf8");
-
+	
+	//logica para checar o tipo de arquivo
 	$arquivo	= $_FILES["file"]["tmp_name"];
 	$nome		= $_FILES["file"]["name"];
-
+	
 	$ext = explode(".", $nome);
 
 	$extensao = end($ext);
-
+	
+	//checagem do tipo de arquivo
 	if($extensao != "csv"){
 		echo "Extensão inválida.";
 	}else{
 		$objeto = fopen($arquivo, 'r');
-
+			//codigos para receber todas linhas do arquivo csv e já separar nas tabelas por ordem, eliminando tudo que não é do tipo especificado.
 			while (($dados = fgetcsv($objeto, 1000, ",")) !== FALSE)	
 			{
 				$group_id		= utf8_encode($dados[0]);
@@ -29,7 +33,7 @@
 			}
 
 			if($result){
-				echo $group_id;
+				echo "Dados inseridos com sucesso.";
 			}else{
 				echo "Erro ao inserir os dados.";
 			}
