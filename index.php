@@ -1,5 +1,5 @@
 <!-- 
-Esse é um código genérico de formulário, para o recebimento do arquivo csv.
+Esse é um código genérico de formulário, para o recebimento do arquivo de extensão csv.
 -->
 <!DOCTYPE html>
 <html lang="en">
